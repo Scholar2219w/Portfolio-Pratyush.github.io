@@ -37,17 +37,17 @@ jQuery(document).ready(function(){
 	});
 
 	//select a single project - open project-content panel
-	projectsContainer.on('click', '.cd-slider a', function(event) {
-		var mq = checkMQ();
-		event.preventDefault();
-		if( $(this).parent('li').next('li').is('.current') && (mq == 'desktop') ) {
-			prevSides(projectsSlider);
-		} else if ( $(this).parent('li').prev('li').prev('li').prev('li').is('.current')  && (mq == 'desktop') ) {
-			nextSides(projectsSlider);
-		} else {
-			singleProjectContent.addClass('is-visible');
-		}
-	});
+	// projectsContainer.on('click', '.cd-slider a', function(event) {
+	// 	var mq = checkMQ();
+	// 	event.preventDefault();
+	// 	if( $(this).parent('li').next('li').is('.current') && (mq == 'desktop') ) {
+	// 		prevSides(projectsSlider);
+	// 	} else if ( $(this).parent('li').prev('li').prev('li').prev('li').is('.current')  && (mq == 'desktop') ) {
+	// 		nextSides(projectsSlider);
+	// 	} else {
+	// 		singleProjectContent.addClass('is-visible');
+	// 	}
+	// });
 
 	//close single project content
 	singleProjectContent.on('click', '.close', function(event){
